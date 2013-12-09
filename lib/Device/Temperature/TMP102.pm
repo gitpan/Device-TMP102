@@ -1,7 +1,7 @@
 package Device::Temperature::TMP102;
 use Moose;
 
-our $VERSION = '0.0.1'; # VERSION
+our $VERSION = '0.0.2'; # VERSION
 
 extends 'Device::SMBus';
 
@@ -31,9 +31,10 @@ sub getTemp {
     # by default, but you never know)
     $self->writeByte( TEMP_REG );
 
-    my $results = $self->readWordData( 0x00 );
+    # Read from this I2C address, R/*W Set
+    $self->writeByte( TMP_RD );
 
-    return $self->convertTemp( $results );
+    return $self->convertTemp( $self->readWordData( TEMP_REG ) );
 }
 
 sub convertTemp {
@@ -85,11 +86,35 @@ __END__
 
 Device::Temperature::TMP102 - I2C interface to TMP102 temperature sensor using Device::SMBus
 
+=head1 DESCRIPTION
+
+Read temperature for a TMP102 temperature sensor over I2C.
+
+This library correctly handles temperatures below freezing (0°C).
+
+=head1 TROUBLESHOOTING
+
+Refer to the documentation on L<Device::SMBus> for information on
+enabling the i2c driver and finding the addresses of your i2c devices.
+
+In the process of testing this on raspberry pi, I saw this error:
+
+  perl: symbol lookup error: .../Device/SMBus/SMBus.so: undefined symbol: i2c_smbus_write_byte
+
+The fix was to install the package libi2c-dev.
+
+
+=head1 SEE ALSO
+
+  https://www.sparkfun.com/products/9418
+
+  https://www.sparkfun.com/datasheets/Sensors/Temperature/tmp102.pdf
+
+  http://donalmorrissey.blogspot.com/2012/09/raspberry-pi-i2c-tutorial.html
+
 =head1 SOURCE
 
 With code and comments taken from example code for the ATmega328:
-
-  https://www.sparkfun.com/products/11931
 
   http://www.sparkfun.com/datasheets/Sensors/Temperature/tmp102.zip
 

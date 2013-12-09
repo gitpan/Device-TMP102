@@ -1,7 +1,87 @@
-Revision history for perl module Device::TMP102
+==================================================
+Changes from 2012-12-09 00:00:00 +0000 to present.
+==================================================
 
-0.0.1 2013-12-08
+------------------------------------------
+version 0.0.2 at 2013-12-09 05:15:54 +0000
+------------------------------------------
 
-  - initial release
+  Change: 03fe8b7d6026d2254f8940f9986dbb9355c7c709
+  Author: Alex White <VVu@geekfarm.org>
+  Date : 2013-12-08 21:14:56 +0000
 
+    switch to Dist::Zilla::Plugin::ChangelogFromGit 
 
+  Change: 25fe1af8ee120f1c97b97628a52c3313f3a043a3
+  Author: Alex White <VVu@geekfarm.org>
+  Date : 2013-12-08 21:10:08 +0000
+
+    remove duplicate link 
+
+  Change: 4ee28f5d832bba084e5959cc6ab428e3a7d9288b
+  Author: Alex White <VVu@geekfarm.org>
+  Date : 2013-12-08 21:09:49 +0000
+
+    eliminate temporary variable 
+
+  Change: 5dd4380586b91b73547ada8a34bdbd32ed569c57
+  Author: Alex White <VVu@geekfarm.org>
+  Date : 2013-12-08 20:41:55 +0000
+
+    update from sample TMP102 test code 
+
+  Change: 55a622eefc3011a061a35c8a63a0e956690c7b5a
+  Author: Alex White <VVu@geekfarm.org>
+  Date : 2013-12-08 20:40:53 +0000
+
+    update pod docs 
+
+------------------------------------------
+version 0.0.1 at 2013-12-09 04:10:24 +0000
+------------------------------------------
+
+  Change: 38961246e4b03cf729d0dd65daeea3800340696a
+  Author: Alex White <VVu@geekfarm.org>
+  Date : 2013-12-08 20:10:24 +0000
+
+    fix another pod typo 
+
+  Change: fccb3c80b231994d105ee446365cef03e85072f1
+  Author: Alex White <VVu@geekfarm.org>
+  Date : 2013-12-08 20:09:11 +0000
+
+    add stopwords for pod spelling test 
+
+  Change: 2413f5f81318442b153b3a5f7870a2ef216643c5
+  Author: Alex White <VVu@geekfarm.org>
+  Date : 2013-12-08 20:08:45 +0000
+
+    fix typo in pod 
+
+  Change: f1bf54392408ef88bcd13fb1e9e9eef84fdd1094
+  Author: Alex White <VVu@geekfarm.org>
+  Date : 2013-12-08 20:02:07 +0000
+
+    adding Changes file for initial release 
+
+  Change: 89da742e38d9670c118aab9a269ab204252b81fc
+  Author: Alex White <VVu@geekfarm.org>
+  Date : 2013-12-08 20:01:37 +0000
+
+    add .gitignore 
+
+  Change: 501e35f23b17ce911c5ea47c49c6fb3d48e15a47
+  Author: Alex White <VVu@geekfarm.org>
+  Date : 2013-12-08 19:59:00 +0000
+
+    make command line script executable 
+
+  Change: 1369d96a0824b8bc4b66fe4a8b1af3c0284b24ec
+  Author: Alex White <VVu@geekfarm.org>
+  Date : 2013-12-08 19:38:27 +0000
+
+    first draft 
+
+================
+End of releases.
+================

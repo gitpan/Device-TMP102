@@ -26,6 +26,8 @@ PCA
 ATmega
 CDevice
 CDeviceAddress
+libi2c
+dev
 Alex
 White
 VVu

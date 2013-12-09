@@ -3,7 +3,7 @@ use warnings;
 
 package Device::TMP102;
 
-our $VERSION = '0.0.1'; # VERSION
+our $VERSION = '0.0.2'; # VERSION
 
 use Moose;
 use POSIX;
@@ -40,6 +40,10 @@ __END__
 =head1 NAME
 
 Device::TMP102 - I2C interface to TMP102 temperature sensor
+
+=head1 DESCRIPTION
+
+See Device::Temperature::TMP102 for more information.
 
 =head1 VERSION
 
