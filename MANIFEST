@@ -1,0 +1,15 @@
+Changes
+LICENSE
+MANIFEST
+META.yml
+Makefile.PL
+README
+dist.ini
+lib/Device/TMP102.pm
+lib/Device/Temperature/TMP102.pm
+scripts/tmp102get
+t/author-critic.t
+t/author-pod-spell.t
+t/convertTemp.t
+t/release-pod-coverage.t
+t/release-pod-syntax.t

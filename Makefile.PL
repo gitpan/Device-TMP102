@@ -1,0 +1,63 @@
+
+use strict;
+use warnings;
+
+
+
+use ExtUtils::MakeMaker 6.30;
+
+
+
+my %WriteMakefileArgs = (
+  "ABSTRACT" => "I2C interface to TMP102 temperature sensor",
+  "AUTHOR" => "Alex White <VVu\@geekfarm.org>",
+  "BUILD_REQUIRES" => {},
+  "CONFIGURE_REQUIRES" => {
+    "ExtUtils::MakeMaker" => "6.30"
+  },
+  "DISTNAME" => "Device-TMP102",
+  "EXE_FILES" => [],
+  "LICENSE" => "bsd",
+  "NAME" => "Device::TMP102",
+  "PREREQ_PM" => {
+    "Device::SMBus" => 0,
+    "Moose" => 0,
+    "POSIX" => 0,
+    "constant" => 0,
+    "strict" => 0,
+    "warnings" => 0
+  },
+  "TEST_REQUIRES" => {
+    "Test::More" => 0
+  },
+  "VERSION" => "0.0.1",
+  "test" => {
+    "TESTS" => "t/*.t"
+  }
+);
+
+
+my %FallbackPrereqs = (
+  "Device::SMBus" => 0,
+  "Moose" => 0,
+  "POSIX" => 0,
+  "Test::More" => 0,
+  "constant" => 0,
+  "strict" => 0,
+  "warnings" => 0
+);
+
+
+unless ( eval { ExtUtils::MakeMaker->VERSION(6.63_03) } ) {
+  delete $WriteMakefileArgs{TEST_REQUIRES};
+  delete $WriteMakefileArgs{BUILD_REQUIRES};
+  $WriteMakefileArgs{PREREQ_PM} = \%FallbackPrereqs;
+}
+
+delete $WriteMakefileArgs{CONFIGURE_REQUIRES}
+  unless eval { ExtUtils::MakeMaker->VERSION(6.52) };
+
+WriteMakefile(%WriteMakefileArgs);
+
+
+
