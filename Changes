@@ -1,10 +1,42 @@
 ==================================================
-Changes from 2012-12-09 00:00:00 +0000 to present.
+Changes from 2012-12-10 00:00:00 +0000 to present.
 ==================================================
 
 ------------------------------------------
-version 0.0.2 at 2013-12-09 05:15:54 +0000
+version 0.0.3 at 2013-12-10 04:21:03 +0000
 ------------------------------------------
+
+  Change: 9bd6c81cfe93be5c35eb345bd490a9fa9e449330
+  Author: Alex White <VVu@geekfarm.org>
+  Date : 2013-12-09 17:58:46 +0000
+
+    install tmp102 script
+
+    - renamed script
+
+    - moved to 'bin/' directory
+
+    - add ExecDir to dist.ini 
+
+  Change: e4cb0c2bae77e0a5b932cfae0b468da525d9b1fb
+  Author: Alex White <VVu@geekfarm.org>
+  Date : 2013-12-08 21:29:37 +0000
+
+    update links in docs
+
+    - sparkfun item 11931 replaces 9418
+
+    - add link to github page 
+
+------------------------------------------
+version 0.0.2 at 2013-12-09 05:16:01 +0000
+------------------------------------------
+
+  Change: 87ec1cb7a30cab8c148fea32fcf26ddf45eb5918
+  Author: Alex White <VVu@geekfarm.org>
+  Date : 2013-12-08 21:16:01 +0000
+
+    v0.0.2 
 
   Change: 03fe8b7d6026d2254f8940f9986dbb9355c7c709
   Author: Alex White <VVu@geekfarm.org>

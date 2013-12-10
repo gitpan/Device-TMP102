@@ -4,10 +4,10 @@ MANIFEST
 META.yml
 Makefile.PL
 README
+bin/tmp102
 dist.ini
 lib/Device/TMP102.pm
 lib/Device/Temperature/TMP102.pm
-scripts/tmp102get
 t/author-critic.t
 t/author-pod-spell.t
 t/convertTemp.t

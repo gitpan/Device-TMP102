@@ -16,7 +16,9 @@ my %WriteMakefileArgs = (
     "ExtUtils::MakeMaker" => "6.30"
   },
   "DISTNAME" => "Device-TMP102",
-  "EXE_FILES" => [],
+  "EXE_FILES" => [
+    "bin/tmp102"
+  ],
   "LICENSE" => "bsd",
   "NAME" => "Device::TMP102",
   "PREREQ_PM" => {
@@ -30,7 +32,7 @@ my %WriteMakefileArgs = (
   "TEST_REQUIRES" => {
     "Test::More" => 0
   },
-  "VERSION" => "0.0.2",
+  "VERSION" => "0.0.3",
   "test" => {
     "TESTS" => "t/*.t"
   }
