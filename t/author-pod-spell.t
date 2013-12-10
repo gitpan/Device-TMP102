@@ -20,8 +20,10 @@ all_pod_files_spelling_ok( qw( bin lib  ) );
 __DATA__
 MERCHANTABILITY
 Redistributions
-CBus
-CBusDevicePath
+i2cbus
+i2cdetect
+i2cget
+i2cbusdevicepath
 PCA
 ATmega
 CDevice
@@ -33,5 +35,5 @@ White
 VVu
 lib
 Device
-Temperature
 TMP102
+Temperature
