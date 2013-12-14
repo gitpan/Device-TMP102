@@ -35,5 +35,5 @@ White
 VVu
 lib
 Device
-TMP102
 Temperature
+TMP102

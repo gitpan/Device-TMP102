@@ -1,7 +1,7 @@
 package Device::Temperature::TMP102;
 use Moose;
 
-our $VERSION = '0.0.4'; # VERSION
+our $VERSION = '0.0.5'; # VERSION
 
 extends 'Device::SMBus';
 
