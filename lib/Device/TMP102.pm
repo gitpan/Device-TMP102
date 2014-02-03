@@ -3,7 +3,7 @@ use warnings;
 
 package Device::TMP102;
 
-our $VERSION = '0.0.5'; # VERSION
+our $VERSION = '0.0.6'; # VERSION
 
 use Moose;
 use POSIX;
@@ -62,7 +62,7 @@ This is a object of L<Device::Temperature::TMP102>
 
 =head1 LICENSE
 
-This software is Copyright (c) 2013 by Alex White.
+This software is Copyright (c) 2014 by Alex White.
 
 This is free software, licensed under:
 

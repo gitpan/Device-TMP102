@@ -1,9 +1,65 @@
 ==================================================
-Changes from 2012-12-14 00:00:00 +0000 to present.
+Changes from 2013-02-03 00:00:00 +0000 to present.
 ==================================================
 
 ------------------------------------------
-version 0.0.5 at 2013-12-14 21:34:41 +0000
+version 0.0.6 at 2014-02-03 08:43:13 +0000
+------------------------------------------
+
+  Change: 9c2dffb6fe6260dbcdd1607e44c0cb868b1cfe72
+  Author: Alex White <VVu@geekfarm.org>
+  Date : 2014-02-03 00:37:30 +0000
+
+    fix default perl path in shebang 
+
+  Change: 4c4dc7c3d0d210b58a038074c4000c58254e352c
+  Author: Alex White <VVu@geekfarm.org>
+  Date : 2014-02-03 00:37:21 +0000
+
+    fix some variable names 
+
+  Change: e3184859f26678c15b04199d529b6fa07cc600b3
+  Author: Alex White <VVu@geekfarm.org>
+  Date : 2014-02-03 00:37:07 +0000
+
+    set I2CBusDevicePath in test cases 
+
+  Change: a9086889448d5e24213f6fe4d1b9db3e386b8d1f
+  Author: Alex White <VVu@geekfarm.org>
+  Date : 2014-02-02 23:27:52 +0000
+
+    die if no temperature data received from sensor
+
+    - created a separate method to set pointer register
+
+    - added some more author test cases 
+
+  Change: dd76a44b342f3bd54981ca78a8ae5887c203523a
+  Author: Alex White <VVu@geekfarm.org>
+  Date : 2014-02-02 23:26:21 +0000
+
+    update pod docs, add SYNOPSIS 
+
+  Change: 935f0cfc577154719910ba669499f0d9f785c325
+  Author: Alex White <VVu@geekfarm.org>
+  Date : 2014-02-02 23:19:15 +0000
+
+    update copyright year to 2014 
+
+  Change: 05bd6a1bc406a929aa40b2838cb201c7bfcbc0fb
+  Author: Alex White <VVu@geekfarm.org>
+  Date : 2014-02-02 23:18:21 +0000
+
+    switch deprecated CriticTests to Test::Perl::Critic 
+
+  Change: a4e40d525c3300c0ee5bdce2aad5a9e160bd2935
+  Author: Alex White <VVu@geekfarm.org>
+  Date : 2014-02-02 23:17:49 +0000
+
+    add VERSION comment to bin/tmp102 
+
+------------------------------------------
+version 0.0.5 at 2013-12-10 07:23:43 +0000
 ------------------------------------------
 
   Change: 43af8a7464fd1f77bcaa872253d3df270738e40d

@@ -1,19 +1,31 @@
 package Device::Temperature::TMP102;
 use Moose;
 
-our $VERSION = '0.0.5'; # VERSION
+our $VERSION = '0.0.6'; # VERSION
 
 extends 'Device::SMBus';
-
-use constant {
-    TMP_RD    => 0x93,
-    TMP_WR    => 0x92,
-    TEMP_REG  => 0x00,
-};
 
 has '+I2CDeviceAddress' => (
     is      => 'ro',
     default => 0x48,
+);
+
+has 'TMP_RD' => (
+    is => 'ro',
+    isa => 'Num',
+    default => 0x93,
+);
+
+has 'TMP_RW' => (
+    is => 'ro',
+    isa => 'Num',
+    default => 0x92,
+);
+
+has 'TMP_REG' => (
+    is => 'ro',
+    isa => 'Num',
+    default => 0x72,
 );
 
 has debug => (
@@ -24,17 +36,13 @@ has debug => (
 sub getTemp {
     my ( $self ) = @_;
 
-    # We want to write a value to the TMP
-    $self->writeByte( TMP_WR );
+    my $results = $self->readWordData( $self->TMP_REG );
 
-    # Set pointer regster to temperature register (it's already there
-    # by default, but you never know)
-    $self->writeByte( TEMP_REG );
+    unless ( $results ) {
+        die( "ERROR: failed to get temperature reading" );
+    }
 
-    # Read from this I2C address, R/*W Set
-    $self->writeByte( TMP_RD );
-
-    return $self->convertTemp( $self->readWordData( TEMP_REG ) );
+    return $self->convertTemp( $results );
 }
 
 sub convertTemp {
@@ -74,6 +82,22 @@ sub convertTemp {
     return $temp;
 }
 
+sub _set_pointer_register {
+    my ( $self ) = @_;
+
+    # We want to write a value to the TMP
+    $self->writeByte( $self->TMP_RW );
+
+    # Set pointer regster to temperature register (it's already there
+    # by default, but you never know)
+    $self->writeByte( $self->TMP_REG );
+
+    # Read from this I2C address, R/*W Set
+    $self->writeByte( $self->TMP_RD );
+
+    return 1;
+}
+
 __PACKAGE__->meta->make_immutable;
 
 1;
@@ -86,6 +110,21 @@ __END__
 
 Device::Temperature::TMP102 - I2C interface to TMP102 temperature sensor using Device::SMBus
 
+=head1 SYNOPSIS
+
+  use Device::Temperature::TMP102;
+
+  my $device = shift @ARGV || '/dev/i2c-1';
+
+  my $dev = Device::Temperature::TMP102->new( I2CBusDevicePath => $device );
+
+  my $temp = $dev->getTemp();
+
+  print "Temp:\n";
+  printf ( "\t%2.2f C\n", $temp );
+  printf ( "\t%2.2f F\n", $temp * 1.8 + 32 );
+
+
 =head1 DESCRIPTION
 
 Read temperature for a TMP102 temperature sensor over I2C.
@@ -94,7 +133,7 @@ This library correctly handles temperatures below freezing (0 degrees Celsius).
 
 =head1 TROUBLESHOOTING
 
-Check for your device using the i2cdetect command, e.g.:
+Check for your device on i2cbus 1 using the i2cdetect command, e.g.:
 
   $ i2cdetect -y 1
 
@@ -189,7 +228,7 @@ Celsius.
 
 =head1 LICENSE
 
-This software is Copyright (c) 2013 by Alex White.
+This software is Copyright (c) 2014 by Alex White.
 
 This is free software, licensed under:
 

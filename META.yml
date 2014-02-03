@@ -3,23 +3,22 @@ abstract: 'I2C interface to TMP102 temperature sensor'
 author:
   - 'Alex White <VVu@geekfarm.org>'
 build_requires:
-  Test::More: 0
+  Test::More: '0'
 configure_requires:
-  ExtUtils::MakeMaker: 6.30
+  ExtUtils::MakeMaker: '6.30'
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 5.006, CPAN::Meta::Converter version 2.133380'
+generated_by: 'Dist::Zilla version 5.012, CPAN::Meta::Converter version 2.133380'
 license: bsd
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
-  version: 1.4
+  version: '1.4'
 name: Device-TMP102
 requires:
-  Device::SMBus: 0
-  Moose: 0
-  POSIX: 0
-  constant: 0
-  strict: 0
-  warnings: 0
+  Device::SMBus: '0'
+  Moose: '0'
+  POSIX: '0'
+  strict: '0'
+  warnings: '0'
 resources:
   repository: http://github.com/wu/Device-TMP102
-version: 0.0.5
+version: 0.0.6
