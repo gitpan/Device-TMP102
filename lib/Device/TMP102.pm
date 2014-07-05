@@ -3,7 +3,7 @@ use warnings;
 
 package Device::TMP102;
 
-our $VERSION = '0.0.7'; # VERSION
+our $VERSION = '0.0.8'; # VERSION
 
 use Moose;
 use POSIX;

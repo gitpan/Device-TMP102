@@ -21,4 +21,4 @@ requires:
   warnings: '0'
 resources:
   repository: http://github.com/wu/Device-TMP102
-version: 0.0.7
+version: 0.0.8
